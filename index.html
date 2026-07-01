@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音声品質評価（MOSテスト）</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .instruction {
+            background-color: #eef2f5;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        .audio-item {
+            background: #fafafa;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .audio-label {
+            font-weight: bold;
+            font-size: 16px;
+            color: #2c3e50;
+        }
+        audio {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>音声品質評価（MOS）再生ページ</h1>
+    
+    <div class="instruction">
+        <p><strong>【手順】</strong></p>
+        <ol>
+            <li>主催者の指示に従って、指定された番号の音声を再生してください。</li>
+            <li>再生が終わったら、手元のGoogleフォームに評価（5段階）を入力してください。</li>
+        </ol>
+        <p><small>※評価中に音量（ボリューム）を変更しないようお願いいたします。</small></p>
+    </div>
+
+    <div class="audio-item">
+        <div class="audio-label">音声サンプル No.1</div>
+        <audio controls src="audio_sample_01.wav" controlsList="nodownload"></audio>
+    </div>
+
+    <div class="audio-item">
+        <div class="audio-label">音声サンプル No.2</div>
+        <audio controls src="audio_sample_02.wav" controlsList="nodownload"></audio>
+    </div>
+
+    <div class="audio-item">
+        <div class="audio-label">音声サンプル No.3</div>
+        <audio controls src="audio_sample_03.wav" controlsList="nodownload"></audio>
+    </div>
+
+</div>
+
+</body>
+</html>
