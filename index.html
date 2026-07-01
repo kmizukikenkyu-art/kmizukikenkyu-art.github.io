@@ -52,6 +52,33 @@
         audio {
             width: 100%;
         }
+        /* 追加した評価エリアのスタイル */
+        .eval-container {
+            display: flex;
+            gap: 15px;
+            margin-top: 5px;
+            flex-wrap: wrap;
+        }
+        .eval-group {
+            flex: 1;
+            min-width: 200px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .eval-group label {
+            font-size: 14px;
+            color: #555;
+            font-weight: bold;
+        }
+        .eval-group select {
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            font-size: 14px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -63,39 +90,158 @@
         <ol>
             <li>google form の指示に従って，以下の音声を再生してください．</li>
             <li>はじめに設定した音量（ボリューム）は，form解答中に変更しないでください。</li>
-
         </ol>
-
     </div>
     
     <div class="audio-item">
         <div class="audio-label">基本音声1（適宜聞き直して，以下No.1〜No.5の音声サンプルと比較してください．）</div>
         <audio controls src="exp1_VCTK014/TE1.0_DP1.0_FL1.0_DE1.0.wav" controlsList="nodownload"></audio>
     </div> 
+
     <div class="audio-item">
         <div class="audio-label">音声サンプル No.1</div>
         <audio controls src="exp1_VCTK014/TE0.1_DP0.5_FL0.7_DE0.6.wav" controlsList="nodownload"></audio>
+        <div class="eval-container">
+            <div class="eval-group">
+                <label>明瞭性：</label>
+                <select name="clarity_no1">
+                    <option value="" disabled selected>選択してください</option>
+                    <option value="5">5：非常に良い</option>
+                    <option value="4">4：良い</option>
+                    <option value="3">3：普通</option>
+                    <option value="2">2：悪い</option>
+                    <option value="1">1：非常に悪い</option>
+                </select>
+            </div>
+            <div class="eval-group">
+                <label>話者類似性：</label>
+                <select name="similarity_no1">
+                    <option value="" disabled selected>選択してください</option>
+                    <option value="5">5：非常に似ている</option>
+                    <option value="4">4：似ている</option>
+                    <option value="3">3：普通</option>
+                    <option value="2">2：似ていない</option>
+                    <option value="1">1：全く似ていない</option>
+                </select>
+            </div>
+        </div>
     </div>
 
     <div class="audio-item">
         <div class="audio-label">音声サンプル No.2</div>
         <audio controls src="exp1_VCTK014/TE0.1_DP0.5_FL0.8_DE0.6.wav" controlsList="nodownload"></audio>
+        <div class="eval-container">
+            <div class="eval-group">
+                <label>明瞭性：</label>
+                <select name="clarity_no2">
+                    <option value="" disabled selected>選択してください</option>
+                    <option value="5">5：非常に良い</option>
+                    <option value="4">4：良い</option>
+                    <option value="3">3：普通</option>
+                    <option value="2">2：悪い</option>
+                    <option value="1">1：非常に悪い</option>
+                </select>
+            </div>
+            <div class="eval-group">
+                <label>話者類似性：</label>
+                <select name="similarity_no2">
+                    <option value="" disabled selected>選択してください</option>
+                    <option value="5">5：非常に似ている</option>
+                    <option value="4">4：似ている</option>
+                    <option value="3">3：普通</option>
+                    <option value="2">2：似ていない</option>
+                    <option value="1">1：全く似ていない</option>
+                </select>
+            </div>
+        </div>
     </div>
 
     <div class="audio-item">
         <div class="audio-label">音声サンプル No.3</div>
+        <audio controls src="exp1_VCTK014/TE0.1_DP0.6_FL0.7_DE0.6.wav" controlsList="nodownload"></option>
         <audio controls src="exp1_VCTK014/TE0.1_DP0.6_FL0.7_DE0.6.wav" controlsList="nodownload"></audio>
+        <div class="eval-container">
+            <div class="eval-group">
+                <label>明瞭性：</label>
+                <select name="clarity_no3">
+                    <option value="" disabled selected>選択してください</option>
+                    <option value="5">5：非常に良い</option>
+                    <option value="4">4：良い</option>
+                    <option value="3">3：普通</option>
+                    <option value="2">2：悪い</option>
+                    <option value="1">1：非常に悪い</option>
+                </select>
+            </div>
+            <div class="eval-group">
+                <label>話者類似性：</label>
+                <select name="similarity_no3">
+                    <option value="" disabled selected>選択してください</option>
+                    <option value="5">5：非常に似ている</option>
+                    <option value="4">4：似ている</option>
+                    <option value="3">3：普通</option>
+                    <option value="2">2：似ていない</option>
+                    <option value="1">1：全く似ていない</option>
+                </select>
+            </div>
+        </div>
     </div>
     
     <div class="audio-item">
         <div class="audio-label">音声サンプル No.4</div>
         <audio controls src="exp1_VCTK014/TE0.1_DP0.6_FL0.8_DE0.6.wav" controlsList="nodownload"></audio>
+        <div class="eval-container">
+            <div class="eval-group">
+                <label>明瞭性：</label>
+                <select name="clarity_no4">
+                    <option value="" disabled selected>選択してください</option>
+                    <option value="5">5：非常に良い</option>
+                    <option value="4">4：良い</option>
+                    <option value="3">3：普通</option>
+                    <option value="2">2：悪い</option>
+                    <option value="1">1：非常に悪い</option>
+                </select>
+            </div>
+            <div class="eval-group">
+                <label>話者類似性：</label>
+                <select name="similarity_no4">
+                    <option value="" disabled selected>選択してください</option>
+                    <option value="5">5：非常に似ている</option>
+                    <option value="4">4：似ている</option>
+                    <option value="3">3：普通</option>
+                    <option value="2">2：似ていない</option>
+                    <option value="1">1：全く似ていない</option>
+                </select>
+            </div>
+        </div>
     </div>
 
-    
     <div class="audio-item">
         <div class="audio-label">音声サンプル No.5</div>
         <audio controls src="exp1_VCTK014/TE0.1_DP0.7_FL0.8_DE0.6.wav" controlsList="nodownload"></audio>
+        <div class="eval-container">
+            <div class="eval-group">
+                <label>明瞭性：</label>
+                <select name="clarity_no5">
+                    <option value="" disabled selected>選択してください</option>
+                    <option value="5">5：非常に良い</option>
+                    <option value="4">4：良い</option>
+                    <option value="3">3：普通</option>
+                    <option value="2">2：悪い</option>
+                    <option value="1">1：非常に悪い</option>
+                </select>
+            </div>
+            <div class="eval-group">
+                <label>話者類似性：</label>
+                <select name="similarity_no5">
+                    <option value="" disabled selected>選択してください</option>
+                    <option value="5">5：非常に似ている</option>
+                    <option value="4">4：似ている</option>
+                    <option value="3">3：普通</option>
+                    <option value="2">2：似ていない</option>
+                    <option value="1">1：全く似ていない</option>
+                </select>
+            </div>
+        </div>
     </div>
     
     <div class="audio-item">
@@ -103,34 +249,150 @@
         <audio controls src="exp2_VCTK018/TE1.0_DP1.0_FL1.0_DE1.0 (1).wav" controlsList="nodownload"></audio>
     </div> 
     
-      <div class="audio-item">
+    <div class="audio-item">
         <div class="audio-label">音声サンプル No.6</div>
         <audio controls src="exp2_VCTK018/TE0.1_DP0.5_FL0.7_DE0.6.wav" controlsList="nodownload"></audio>
+        <div class="eval-container">
+            <div class="eval-group">
+                <label>明瞭性：</label>
+                <select name="clarity_no6">
+                    <option value="" disabled selected>選択してください</option>
+                    <option value="5">5：非常に良い</option>
+                    <option value="4">4：良い</option>
+                    <option value="3">3：普通</option>
+                    <option value="2">2：悪い</option>
+                    <option value="1">1：非常に悪い</option>
+                </select>
+            </div>
+            <div class="eval-group">
+                <label>話者類似性：</label>
+                <select name="similarity_no6">
+                    <option value="" disabled selected>選択してください</option>
+                    <option value="5">5：非常に似ている</option>
+                    <option value="4">4：似ている</option>
+                    <option value="3">3：普通</option>
+                    <option value="2">2：似ていない</option>
+                    <option value="1">1：全く似ていない</option>
+                </select>
+            </div>
+        </div>
     </div>
 
     <div class="audio-item">
         <div class="audio-label">音声サンプル No.7</div>
         <audio controls src="exp2_VCTK018/TE0.1_DP0.5_FL0.8_DE0.6.wav" controlsList="nodownload"></audio>
+        <div class="eval-container">
+            <div class="eval-group">
+                <label>明瞭性：</label>
+                <select name="clarity_no7">
+                    <option value="" disabled selected>選択してください</option>
+                    <option value="5">5：非常に良い</option>
+                    <option value="4">4：良い</option>
+                    <option value="3">3::普通</option>
+                    <option value="2">2：悪い</option>
+                    <option value="1">1：非常に悪い</option>
+                </select>
+            </div>
+            <div class="eval-group">
+                <label>話者類似性：</label>
+                <select name="similarity_no7">
+                    <option value="" disabled selected>選択してください</option>
+                    <option value="5">5：非常に似ている</option>
+                    <option value="4">4：似ている</option>
+                    <option value="3">3：普通</option>
+                    <option value="2">2：似ていない</option>
+                    <option value="1">1：全く似ていない</option>
+                </select>
+            </div>
+        </div>
     </div>
 
     <div class="audio-item">
         <div class="audio-label">音声サンプル No.8</div>
         <audio controls src="exp2_VCTK018/TE0.1_DP0.6_FL0.7_DE0.6.wav" controlsList="nodownload"></audio>
+        <div class="eval-container">
+            <div class="eval-group">
+                <label>明瞭性：</label>
+                <select name="clarity_no8">
+                    <option value="" disabled selected>選択してください</option>
+                    <option value="5">5：非常に良い</option>
+                    <option value="4">4：良い</option>
+                    <option value="3">3：普通</option>
+                    <option value="2">2：悪い</option>
+                    <option value="1">1：非常に悪い</option>
+                </select>
+            </div>
+            <div class="eval-group">
+                <label>話者類似性：</label>
+                <select name="similarity_no8">
+                    <option value="" disabled selected>選択してください</option>
+                    <option value="5">5：非常に似ている</option>
+                    <option value="4">4：似ている</option>
+                    <option value="3">3：普通</option>
+                    <option value="2">2：似ていない</option>
+                    <option value="1">1：全く似ていない</option>
+                </select>
+            </div>
+        </div>
     </div>
     
     <div class="audio-item">
         <div class="audio-label">音声サンプル No.9</div>
         <audio controls src="exp2_VCTK018/TE0.1_DP0.6_FL0.8_DE0.6.wav" controlsList="nodownload"></audio>
+        <div class="eval-container">
+            <div class="eval-group">
+                <label>明瞭性：</label>
+                <select name="clarity_no9">
+                    <option value="" disabled selected>選択してください</option>
+                    <option value="5">5：非常に良い</option>
+                    <option value="4">4：良い</option>
+                    <option value="3">3：普通</option>
+                    <option value="2">2：悪い</option>
+                    <option value="1">1：非常に悪い</option>
+                </select>
+            </div>
+            <div class="eval-group">
+                <label>話者類似性：</label>
+                <select name="similarity_no9">
+                    <option value="" disabled selected>選択してください</option>
+                    <option value="5">5：非常に似ている</option>
+                    <option value="4">4：似ている</option>
+                    <option value="3">3：普通</option>
+                    <option value="2">2：似ていない</option>
+                    <option value="1">1：全く似ていない</option>
+                </select>
+            </div>
+        </div>
     </div>
 
-    
     <div class="audio-item">
         <div class="audio-label">音声サンプル No.10</div>
         <audio controls src="exp2_VCTK018/TE0.1_DP0.7_FL0.8_DE0.6.wav" controlsList="nodownload"></audio>
+        <div class="eval-container">
+            <div class="eval-group">
+                <label>明瞭性：</label>
+                <select name="clarity_no10">
+                    <option value="" disabled selected>選択してください</option>
+                    <option value="5">5：非常に良い</option>
+                    <option value="4">4：良い</option>
+                    <option value="3">3：普通</option>
+                    <option value="2">2：悪い</option>
+                    <option value="1">1：非常に悪い</option>
+                </select>
+            </div>
+            <div class="eval-group">
+                <label>話者類似性：</label>
+                <select name="similarity_no10">
+                    <option value="" disabled selected>選択してください</option>
+                    <option value="5">5：非常に似ている</option>
+                    <option value="4">4：似ている</option>
+                    <option value="3">3：普通</option>
+                    <option value="2">2：似ていない</option>
+                    <option value="1">1：全く似ていない</option>
+                </select>
+            </div>
+        </div>
     </div>
-
-    
-
 
 </div>
 
